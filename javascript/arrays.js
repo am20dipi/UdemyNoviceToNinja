@@ -24,9 +24,10 @@ console.log(index) // => 1
 let concatenateArrays = ninjas.concat(['hi', 'there'])
 console.log(concatenateArrays) // => ['Dillon', 'Adri', 'Charles', 'hi', 'there']
 
-// .push() -- destructive; alters original value
+// .push(value) -- destructive; alters original value
 // adds value passed in to the end of the array
 // returns the length of the new modified array
+
 
 // .pop() -- destructive; alters original value
 // removes last array item of the array
@@ -35,4 +36,8 @@ console.log(concatenateArrays) // => ['Dillon', 'Adri', 'Charles', 'hi', 'there'
 
 // .shift()
 
-// .unshift()
+// .unshift(value)
+
+// .slice(start, endpoint)
+
+// .splice(index, how many)
