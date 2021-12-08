@@ -15,3 +15,4 @@ The act of converting a datatype into another.
 
 ## STRING => NUMBER
  * use Number()
+ 
