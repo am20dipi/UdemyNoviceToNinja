@@ -26,7 +26,7 @@ while (i < 5){
 }
 
 // this loop does virtually the same exact thing as the for loop above
-// the syntax is different; while loops allow for break statements
+// however, the syntax is different
 // also, we increment i within the code block and declare + assign i outside of the while loop
 
 const nums = [12, 43, 55]
