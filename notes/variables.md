@@ -10,12 +10,14 @@
 - can be reassigned, changed
 - local variable
 - apart of ES6 -- recommended for use
+- cannot be redeclared within the same scope
 
 
 ## CONST
 - cannot be reassigned, changed
 - local variable
 - apart of ES6 -- recommended for use
+- cannot be redeclared
 
 
 ## VAR
