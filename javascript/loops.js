@@ -51,3 +51,31 @@ do {
     i++
 } while (i < 5);
 
+
+
+// break statement
+
+const scores = [50, 20, 70, 80, 100, 20]
+
+for (let i = 0; i < scores.length; i++){
+    console.log('your score: ', scores[i])
+
+    if (scores[i] === 100){
+        console.log('congrats, you got the top score: ', scores[i])
+        break;
+        // breaks out of the loop given a condition
+    }
+}
+
+
+// continue statement
+
+for (let i = 0; i < scores.length; i++){
+    console.log('your score: ', scores[i])
+
+    if (scores[i] === 0){
+        continue;
+    }
+    // jumps out of the loop and continues to execute code block for the rest of the array
+    // excludes the score of 0
+}
