@@ -1,4 +1,4 @@
-# COMPARISON OPERATORS
+# COMPARISON + EQUALITY OPERATORS
 
 # 'Loose' Comparison Operators
 
