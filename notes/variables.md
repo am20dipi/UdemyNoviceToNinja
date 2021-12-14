@@ -11,6 +11,7 @@
 - local variable
 - apart of ES6 -- recommended for use
 - cannot be redeclared within the same scope
+- block scoped
 
 
 ## CONST
@@ -18,8 +19,11 @@
 - local variable
 - apart of ES6 -- recommended for use
 - cannot be redeclared
+- block scopeed
 
 
 ## VAR
 - older way to create variables -- not recommended for use
-- 
+- can be redeclared
+- can be reassigned
+- global scope; not caged to block scope
