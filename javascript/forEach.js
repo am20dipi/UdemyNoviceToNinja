@@ -22,3 +22,20 @@ fruit.forEach(logFruit)
 
 
 // callback functions -- functions we pass to another function (or method) as an argument
+
+
+// using .forEach() to create DOM elements
+
+
+
+const ul = document.querySelector('.people')
+
+const people = ['mario', 'luigi', 'princess peach', 'toad', 'yoshi']
+
+let html = ``
+
+people.forEach = (person) => {
+    html += `<li style="color: purple">${person}</li>`
+}
+
+ul.innerHTML = html
