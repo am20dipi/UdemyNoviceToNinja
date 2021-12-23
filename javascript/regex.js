@@ -57,3 +57,14 @@ let result = pattern.test(username)
 // this will return an integer: the index of where the pattern occurs
 // it will return -1 if pattern does not exist in the input
 let result2 = username.search(pattern)
+
+
+
+// Some more REGEX examples
+
+const passwordPattern = /^[a-zA-Z0-9]{6,16}$/
+// allows lower + uppercase letters
+// allows for numbers
+// must be atleast 6 chars long
+// no longer than 16 chars
+// nothing precedes or succeeds it
