@@ -18,6 +18,11 @@
     // [a-z A-Z](6,10) only allows for input between 6 and 10 chars long
     // [a-z 0-9] allows for nums + letters
 
+// min-max (){}
+    // {6,} min of 6 chars -- no max
+    // (5, 12) atleast 5 chars and no more than 12
+    // {,100} max of 100 chars
+
 // g
     // global modifier -- all matches?
 
@@ -38,8 +43,17 @@ form.addEventListener('submit', (e) => {
 })
 
 const username = 'shaun'
-const pattern = /[a-z]{6,}/
+const pattern = /^[a-z]{6,}$/
 // any lowercase letters, min of 6 chars long -- no max. 
+// nothing precedes or succedes it
 
-let result = pattern.test(username)
+
+// calling .test() on pattern and passing in the username
+// .test() returns true or false
 // if passes the regex test, returns true; otherwise returns false
+let result = pattern.test(username)
+
+// calling .search() on username to search for the pattern
+// this will return an integer: the index of where the pattern occurs
+// it will return -1 if pattern does not exist in the input
+let result2 = username.search(pattern)
