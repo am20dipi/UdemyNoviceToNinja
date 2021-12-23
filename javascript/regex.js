@@ -68,3 +68,16 @@ const passwordPattern = /^[a-zA-Z0-9]{6,16}$/
 // must be atleast 6 chars long
 // no longer than 16 chars
 // nothing precedes or succeeds it
+
+
+// Live Feedback using Class Attributes + REGEX
+
+const usernamePattern = /^[a-zA-Z0-9]{6,16}$/
+
+form.username.addEventListener('keyup', e => {
+    if (usernamePattern.test(e.target.value)){
+        form.username.setAttribute('class', 'success')
+    } else {
+        form.username.setAttribute('class', 'error')
+    }
+})
