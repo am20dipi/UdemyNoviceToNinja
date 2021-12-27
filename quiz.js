@@ -13,11 +13,22 @@ form.addEventListener('submit', (e) => {
     // check answers
     userAnswers.forEach((answer, index)=>{
         if (answer === correctAnswers[index]){
-            score += 1
+            score += 33
         }
     })
     scrollTo(0,0)
-    result.querySelector('span').textContent = `${score}`
+    
     result.classList.remove('d-none')
+
+    let output = 0
+    // after 1 second, callback function is fired; continues to fire function every 1 second thereafter
+    const timer = setInterval(() => {
+        result.querySelector('span').textContent = `${output}%`
+        if ( output === score){
+            clearInterval(timer)
+        } else {
+            output++
+        }
+    }, 50)
 
 })
