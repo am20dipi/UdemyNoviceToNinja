@@ -16,6 +16,7 @@ form.addEventListener('submit', (e) => {
             score += 1
         }
     })
+    scrollTo(0,0)
     result.querySelector('span').textContent = `${score}`
     result.classList.remove('d-none')
 
