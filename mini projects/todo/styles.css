@@ -10,7 +10,7 @@ input[type=text],
 input[type=text]:focus{
     max-width: 400px;
     border: none;
-    color:rgb(206, 216, 190);
+    color:rgb(91, 109, 62);
     background: rgb(206, 216, 190)
 }
 
