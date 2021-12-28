@@ -9,6 +9,7 @@ const tick = () => {
     //console.log(hour, minutes, seconds)
 
     const html = `
+        <p>Current Time</p><br/>
         <span>${hour} : ${minutes} : ${seconds}</span>
     `
     clock.innerHTML = html
