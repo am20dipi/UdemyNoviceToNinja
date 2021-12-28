@@ -44,3 +44,7 @@ console.log(hours)
 
 const days = Math.round(hours / 24)
 console.log(days)
+
+// converting timestamp into date object
+const timestamp = 167593847990
+console.log(new Date(timestamp))
