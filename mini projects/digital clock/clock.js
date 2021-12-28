@@ -9,7 +9,7 @@ const tick = () => {
     //console.log(hour, minutes, seconds)
 
     const html = `
-        <span>${hour}:${minutes}:${seconds}</span>
+        <span>${hour} : ${minutes} : ${seconds}</span>
     `
     clock.innerHTML = html
 }
