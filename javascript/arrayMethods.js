@@ -46,6 +46,7 @@
         }
     })
 
+
 // REDUCE()
 
     // iterates through the array
@@ -65,3 +66,20 @@
 
     console.log(reducedCats)
     // should return 1 because only 1 cat is greater than 50
+
+
+
+// FIND()
+
+    // iterates through an array
+    // fires a callback for each array item
+    // returns the first item that meets the condition
+    // stops firing callback function once condition is met 
+
+    const nums = [20, 30, 12, 50, 17]
+
+    const findNum = nums.find((num) => {
+        return num > 25
+    })
+    console.log(findNum)
+    // should return 30 because it is the first array item that is greater than 25
