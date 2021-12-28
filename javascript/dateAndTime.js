@@ -21,7 +21,26 @@ now.getSeconds()
 
 
 // Timestamps
-now.getTime()
+now.getTime() // => time in milliseconds
 now.toDateString()  // => Tues Dec 28 2021
 now.toTimeString()  // => Time + Timezone
-now.toLocaltring()  // => 12/28/2021, 14:41:41
+now.toLocalString()  // => 12/28/2021, 14:41:41
+
+
+// Comparing times
+const before = new Date('December 28 2021 7:30:59')
+const now = new Date()
+console.log(now.getTime(), before.getTime())
+
+
+const difference = now.getTime() - before.getTime()
+console.log(difference)
+    //convert to minutes, hours, days ...
+const minutes = Math.round(difference/ 1000 / 60)
+console.log(minutes)
+
+const hours = Math.round(minutes / 60)
+console.log(hours)
+
+const days = Math.round(hours / 24)
+console.log(days)
