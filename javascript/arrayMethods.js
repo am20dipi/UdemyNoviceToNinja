@@ -83,3 +83,40 @@
     })
     console.log(findNum)
     // should return 30 because it is the first array item that is greater than 25
+
+
+// SORT()
+
+    // iterates through an array / an object
+    // fires a callback for each array item / instance of an object
+    // sort() is DESTRUCTIVE -- does not need to be stored in a variable
+    // sort() called on numbers will sort them by the first digit -- unless specified
+
+    const names = ["koko", 'cosmo', 'charles', 'zoie', 'mindy']
+
+    names.sort()
+    // returns an alphabetical, modified version of names
+
+
+    
+    // using sort() for an object needs to be passed a callback as an argument
+    const players = [
+        {name: 'mario', score: 20},
+        {name: 'luigi', score: 30},
+        {name: 'adri', score: 25},
+        {name: 'dillon', score: 40},
+    ]
+
+    // checking to see if score of first instance of object is greater than next instance
+    // swapping the order to return players sorted by highest score
+    players.sort((a,b) => {
+        if (a.score > b.score){
+            return -1
+        } else if (b.score > a.score){
+            return 1
+        } else {
+            // if a === b
+            return 0
+        }
+    })
+
