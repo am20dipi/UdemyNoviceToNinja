@@ -1,5 +1,6 @@
 const addForm = document.querySelector('.add')
 const list = document.querySelector(".todos")
+const searchInput = document.querySelector('.search input')
 
 
 // adding new todo
@@ -30,4 +31,29 @@ list.addEventListener("click", (e) => {
     if(e.target.classList.contains('delete')){
         e.target.parentElement.remove()
     }
+})
+
+
+// searching for a todo
+const filterTodos = (term) => {
+    Array.from(list.children)
+        .filter((todo) => {
+            return !todo.textContent.includes(term)
+        })
+        .forEach((todo) => {
+            return todo.classList.add('filtered')
+        })
+    Array.from(list.children)
+        .filter((todo) => {
+            return todo.textContent.includes(term)
+         })
+        .forEach((todo) => {
+            return todo.classList.remove('filtered')
+        })
+}
+
+searchInput.addEventListener("keyup", () => {
+    const term = searchInput.value.trim()
+    //console.log(term)
+    filterTodos(term)
 })
