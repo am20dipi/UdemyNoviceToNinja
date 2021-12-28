@@ -120,3 +120,8 @@
         }
     })
 
+    // SHORTCUT TO WRITE ABOVE EXAMPLE
+    players.sort((a,b) => {
+        return b.score - a.score
+    })
+
