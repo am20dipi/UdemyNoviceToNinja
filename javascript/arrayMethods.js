@@ -45,3 +45,23 @@
             return product
         }
     })
+
+// REDUCE()
+
+    // iterates through the array
+    // fires a callback for each array item
+    // takes in two (2) args: accumulator (acc) and current (curr)
+    // does not return a new array
+    // returns a single value based on the condition
+
+    const cats = [4, 44, 64, 21]
+
+    const reducedCats = cats.reduce((acc, curr) => {
+        if (curr > 50){
+            acc++
+        }
+        return acc
+    }, 0)
+
+    console.log(reducedCats)
+    // should return 1 because only 1 cat is greater than 50
