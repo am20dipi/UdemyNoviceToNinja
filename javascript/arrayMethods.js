@@ -31,3 +31,17 @@
     })
     console.log(salePrices)
     
+
+    const products = [
+        {name: 'gold', price: 20},
+        {name: 'green', price: 20},
+        {name: 'blue', price: 40}
+    ]
+
+    const saleProducts = products.map((product) => {
+        if (product.price > 30){
+            return {name: product.name, price: product.price / 2}
+        } else{
+            return product
+        }
+    })
