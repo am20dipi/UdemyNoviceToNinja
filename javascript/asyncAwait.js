@@ -15,7 +15,15 @@ const getMovies = async () => {
 
     // since .json() returns a Promise, we need to use await again
     const data = await response.json()
-    console.log(data)
+    //console.log(data)
+    return data
 }
 
 getMovies()
+    .then((data) => {
+        console.log('resolved: ', data)
+    })
+    .catch((error) => {
+        console.log('rejected: ', error.message)
+    })
+
