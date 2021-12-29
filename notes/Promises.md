@@ -12,4 +12,7 @@
 * OR we pass an error to the reject() function if the request is NOT successful. 
     * Second callback function in the .then() function is called when the Promise is rejected. 
 
+* .then() =>  a method that returns a Promise. It takes up to two arguments: callback functions for the success and failure cases of the Promise.
+
+* .catch() => method returns a Promise and deals with rejected cases only.
 
