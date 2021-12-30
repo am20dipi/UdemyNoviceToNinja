@@ -1,7 +1,11 @@
+// interaction with API
+
+// storing API key in variable
 const key = '7P9yAWDrDjtxBb3Oj1mOAYojpTKURpx2'
 
-// get weather info
 
+
+// get weather info
 const getWeather = async (id) => {
     
     const endpoint = 'http://dataservice.accuweather.com/currentconditions/v1/'
@@ -25,7 +29,7 @@ const getCity = async (city) => {
 
 }
 
-getCity('manchester')
+/* getCity('manchester')
     .then((data) => {
         return getWeather(data.Key)
     }).then((data) => {
@@ -33,5 +37,5 @@ getCity('manchester')
     })
     .catch((error) => {
         console.log(error.message)
-    })
+    }) */
 
