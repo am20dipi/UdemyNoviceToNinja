@@ -49,3 +49,6 @@ Then, we can set the data using .setItem():
 
 localStorage.setItem("name of array", JSON.stringify(name of array))
 
+
+JSON.parse() is used to return JSON string back to original format, i.e array
+

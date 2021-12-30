@@ -78,4 +78,18 @@ cityForm.addEventListener("submit", (e) => {
         .catch((error) => {
             console.log(error.message)
         })
+
+    // set city and weather to local storage after submit event
+    localStorage.setItem("city", city)
 })
+
+// check to see if city has already been inputted; aka if city already exists in localStorage
+if (localStorage.getItem("city")){
+    updateCity(localStorage.getItem("city"))
+        .then((data) => {
+            updateUI(data)
+        })
+        .catch((error) => {
+            console.log(error.message)
+        })
+}
