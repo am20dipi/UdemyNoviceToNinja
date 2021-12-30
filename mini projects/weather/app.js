@@ -1,7 +1,32 @@
 // DOM manipulation
 
 const cityForm = document.querySelector('form')
+const card = document.querySelector('.card')
+const details = document.querySelector('.details')
 
+
+const updateUI = (data) => {
+
+    const cityDetails = data.cityDetails
+    const weather = data.weather
+
+    // update details template
+        // city name, weather, temperature
+    details.innerHTML = `
+        <h5 class="my-3 city">${cityDetails.EnglishName}</h5>
+        <div class="my-3 condition">${weather.WeatherText}</div>
+        <div class="display-4 my-4 temperature">
+            <span>${weather.Temperature.Imperial.Value}</span>
+            <span>&deg;F</span>
+        </div>
+    `
+
+    // remove display:none class
+    if (card.classList.contains('d-none')){
+        card.classList.remove('d-none')
+    }
+
+}
 
 const updateCity = async (city) => {
     // store responses from our async functions (located in forecast.js)
@@ -28,7 +53,7 @@ cityForm.addEventListener("submit", (e) => {
     // when the promise resolves or rejects
     updateCity(city)
         .then((data) => {
-            console.log(data)
+            updateUI(data)
         })
         .catch((error) => {
             console.log(error.message)
