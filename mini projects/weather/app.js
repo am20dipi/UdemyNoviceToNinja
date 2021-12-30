@@ -24,6 +24,23 @@ const updateUI = (data) => {
         </div>
     `
 
+    // update day/night image by setting image to src attriubute
+    let timeSrc = null
+    if (weather.IsDayTime === true){
+        timeSrc =  'img/day.svg'
+    } else {
+        timeSrc = 'img/night.svg'
+    }
+    time.setAttribute("src", timeSrc)
+
+    // update weather icon 
+    const iconSrc = `
+        img/icons/${weather.WeatherIcon}.svg
+    `
+    icon.setAttribute("src", iconSrc)
+
+
+
     // remove display:none class
     if (card.classList.contains('d-none')){
         card.classList.remove('d-none')
