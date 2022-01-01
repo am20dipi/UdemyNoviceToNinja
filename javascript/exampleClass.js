@@ -42,10 +42,36 @@ userTwo.login()
 // use 'extend' keyword 
 
 class Admin extends User {
-
+    
+    deleteUser(user){
+        // filter returns only things that are true
+        // so if the user's username in the array does not match the user we pass (with intention to delete)
+        // then return true
+        // whatever returns false is filtered out (the deleted user)
+        users = users.filter((u) => {
+           return u.username !== user.username
+        })
+    }
 }
 
 const userThree = new Admin('esme', 'esme@gmail.com')
 // even with nothing in class Admin; this instance of 
 // Admin class 'userThree' will have access to whatever 
 // an instance of class User has. 
+
+let users = [userOne, userTwo, userThree]
+userThree.deleteUser(userTwo)
+console.log(users)
+
+
+// SUPER()
+
+// when we call super() in a constructor, it looks for the constructor() in the parent class.
+// super() then runs thats constructor so we do not have to rewrite the constructor in the inherited class. 
+
+class Owner extends User{
+    constructor(username, email, title){
+        super(username, email)
+        this.title = title
+    }
+}
