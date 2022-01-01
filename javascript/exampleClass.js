@@ -33,3 +33,19 @@ userTwo.login()
 // returning 'this' is returning the instance of the user object the methods are called on. 
 
 
+
+// CLASS INHERITANCE (subclasses)
+
+// subclasses extend another class
+// subclasses are classes that inherit functionality and properties from another class
+// subclasses can also have their own functionalities in addition to inherited functionality
+// use 'extend' keyword 
+
+class Admin extends User {
+
+}
+
+const userThree = new Admin('esme', 'esme@gmail.com')
+// even with nothing in class Admin; this instance of 
+// Admin class 'userThree' will have access to whatever 
+// an instance of class User has. 
