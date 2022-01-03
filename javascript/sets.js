@@ -27,4 +27,17 @@ ages.size()
 ages.has(20)
 // => this will return a boolean
 // => in our case, this will return false because '20' does not exist in ages
+ages.clear()
+// => clears the set; returns an empty set
 
+// Sets are iterable! yay!
+const ninjas = new Set([
+    {name: 'adri', age: 24},
+    {name: 'dillon', age: 24},
+    {name: 'cosmo', age: 5},
+    {name: 'koko', age: 4}
+])
+
+ninjas.forEach(ninja => {
+    console.log(ninja.name, ninja.age)
+})
