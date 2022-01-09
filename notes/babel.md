@@ -10,9 +10,12 @@ Babel is a JavaScript compiler: converts all of our modern JavaScript features t
 
 1. Install NodeJS onto your computer.
 2. Install Node Package Manager (NPM).
-3. Install BABEL package using NPM. 
-4. Install Babel preset using NPM. 
+3. Use 'npm' init to create a package.json file in the project directory. 
+4. Install Babel/core package using NPM. 
+5. Install Babel/cli package using NPM.
+6. Install Babel preset using NPM. 
     * 'npm install @babel/preset-env'
+7. Register Babel preset in .babelrc file. 
 
 
 
@@ -30,5 +33,5 @@ Babel is a JavaScript compiler: converts all of our modern JavaScript features t
 
 ## What is Babel Preset package?
 
-Babel Preset is a smart preset that allows you to use the latest JavaScript without needing to micromanage which syntax transforms (and optionally, browser polyfills) are needed by your target environment(s).
-
+* Babel Preset is a smart preset that allows you to use the latest JavaScript without needing to micromanage which syntax transforms (and optionally, browser polyfills) are needed by your target environment(s).
+* In short, it handles our code is written. 
